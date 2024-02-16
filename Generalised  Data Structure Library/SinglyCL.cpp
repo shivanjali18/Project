@@ -227,53 +227,217 @@ void SinglyCL<T>::DeleteAtPos(int ipos)
 
 int main()
 {
-    SinglyCL  <int>obj;
-    int iret=0;
+   int i;  
+    cout<<"SinglyCL of integer type:"<<"\n";
+    cout<<"SinglyCL of float type:"<<"\n";
+    cout<<"SinglyCL of double type:"<<"\n";
+    cout<<"SinglyCL of character type:"<<"\n";
 
-    obj.InsertFirst(51);
-    obj.InsertFirst(21);
+    cout<<"Enter your choise :"<<"\n";
+    cin>>i;
+
+    if(i == 1)
+    {
+    SinglyCL <int>obj;
+
+    int iRet = 0;
+
     obj.InsertFirst(11);
-
-    obj.Display();
-
-    iret=obj.CountNode();
-    cout<<"\n Number of nodes are :"<<iret<<"\n";
-
-    obj.InsertLast(101);
-    obj.InsertLast(111);
+    obj.InsertFirst(21);
+    obj.InsertFirst(51);
+    obj.InsertFirst(101);
+    obj.InsertFirst(111);
+    
     obj.InsertLast(121);
+    obj.InsertLast(151);
+    obj.InsertLast(201);
+    
+    obj.Display();
+
+    iRet = obj.CountNode();
+    cout<<"Number of elements in the linked list are : "<<iRet<<"\n";
+
+    obj.InsertAtPos(105, 5);
 
     obj.Display();
 
-    iret=obj.CountNode();
-    cout<<"\n Number of nodes are :"<<iret<<"\n";
+    iRet = obj.CountNode();
+    cout<<"Number of elements in the linked list are : "<<iRet<<"\n";
+
+    obj.DeleteAtPos(5);
+
+    obj.Display();
+
+    iRet = obj.CountNode();
+    cout<<"Number of elements in the linked list are : "<<iRet<<"\n";
 
     obj.DeleteFirst();
+    
 
     obj.Display();
 
-    iret=obj.CountNode();
-    cout<<"\n Number of nodes are :"<<iret<<"\n";
+    iRet = obj.CountNode();
+    cout<<"Number of elements in the linked list are : "<<iRet<<"\n";
 
     obj.DeleteLast();
 
+    
     obj.Display();
 
-    iret=obj.CountNode();
-    cout<<"\n Number of nodes are :"<<iret<<"\n";
+    iRet = obj.CountNode();
+    cout<<"Number of elements in the linked list are : "<<iRet<<"\n";
+    }
+    else if(i == 2)
+    {
+         SinglyCL <float>obj;
 
-    obj.InsertAtPos(105,3);
+    int iRet = 0;
+
+    obj.InsertFirst(11.11);
+    obj.InsertFirst(21.2);
+    obj.InsertFirst(51.3);
+    obj.InsertFirst(101.4);
+    obj.InsertFirst(111.5);
+    
+    obj.InsertLast(121.6);
+    obj.InsertLast(151.2);
+    obj.InsertLast(201.3);
+    
+    obj.Display();
+
+    iRet = obj.CountNode();
+    cout<<"Number of elements in the linked list are : "<<iRet<<"\n";
+
+    obj.InsertAtPos(105.8, 5);
 
     obj.Display();
 
-    iret=obj.CountNode();
-    cout<<"\n Number of nodes are :"<<iret<<"\n";
+    iRet = obj.CountNode();
+    cout<<"Number of elements in the linked list are : "<<iRet<<"\n";
 
-    obj.DeleteAtPos(3);
+    obj.DeleteAtPos(5);
 
     obj.Display();
 
-    iret=obj.CountNode();
-    cout<<"\n Number of nodes are :"<<iret<<"\n";
-    return 0;
+    iRet = obj.CountNode();
+    cout<<"Number of elements in the linked list are : "<<iRet<<"\n";
+
+    obj.DeleteFirst();
+    
+
+    obj.Display();
+
+    iRet = obj.CountNode();
+    cout<<"Number of elements in the linked list are : "<<iRet<<"\n";
+
+    obj.DeleteLast();
+
+    
+    obj.Display();
+
+    iRet = obj.CountNode();
+    cout<<"Number of elements in the linked list are : "<<iRet<<"\n";
+    }
+    else if(i == 3)
+    {
+        SinglyCL <double>obj;
+
+    int iRet = 0;
+
+    obj.InsertFirst(11.1111);
+    obj.InsertFirst(21.3234);
+    obj.InsertFirst(51.789);
+    obj.InsertFirst(101.098);
+    obj.InsertFirst(111.567);
+    
+    obj.InsertLast(121.432);
+    obj.InsertLast(151.429);
+    obj.InsertLast(201.320);
+    
+    obj.Display();
+
+    iRet = obj.CountNode();
+    cout<<"Number of elements in the linked list are : "<<iRet<<"\n";
+
+    obj.InsertAtPos(105.526, 5);
+
+    obj.Display();
+
+    iRet = obj.CountNode();
+    cout<<"Number of elements in the linked list are : "<<iRet<<"\n";
+
+    obj.DeleteAtPos(5);
+
+    obj.Display();
+
+    iRet = obj.CountNode();
+    cout<<"Number of elements in the linked list are : "<<iRet<<"\n";
+
+    obj.DeleteFirst();
+    
+
+    obj.Display();
+
+    iRet = obj.CountNode();
+    cout<<"Number of elements in the linked list are : "<<iRet<<"\n";
+
+    obj.DeleteLast();
+
+    
+    obj.Display();
+
+    iRet = obj.CountNode();
+    cout<<"Number of elements in the linked list are : "<<iRet<<"\n";
+    }
+   else if (i == 4)
+{
+    SinglyCL <char>obj;
+
+    int iRet = 0;
+
+    obj.InsertFirst('E');
+    obj.InsertFirst('D');
+    obj.InsertFirst('C');
+    obj.InsertFirst('B');
+    obj.InsertFirst('A');
+    
+    obj.InsertLast('X');
+    obj.InsertLast('Y');
+    obj.InsertLast('Z');
+    
+    obj.Display();
+
+    iRet = obj.CountNode();
+    cout<<"Number of elements in the linked list are : "<<iRet<<"\n";
+
+    obj.InsertAtPos('S', 5);
+
+    obj.Display();
+
+    iRet = obj.CountNode();
+    cout<<"Number of elements in the linked list are : "<<iRet<<"\n";
+
+    obj.DeleteAtPos(5);
+
+    obj.Display();
+
+    iRet = obj.CountNode();
+    cout<<"Number of elements in the linked list are : "<<iRet<<"\n";
+
+    obj.DeleteFirst();
+    
+
+    obj.Display();
+
+    iRet = obj.CountNode();
+    cout<<"Number of elements in the linked list are : "<<iRet<<"\n";
+
+    obj.DeleteLast();
+
+    
+    obj.Display();
+
+    iRet = obj.CountNode();
+    cout<<"Number of elements in the linked list are : "<<iRet<<"\n";
+}
 }
