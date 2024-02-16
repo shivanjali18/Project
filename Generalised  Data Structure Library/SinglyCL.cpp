@@ -440,4 +440,8 @@ int main()
     iRet = obj.CountNode();
     cout<<"Number of elements in the linked list are : "<<iRet<<"\n";
 }
+    else
+   {
+       cout<<"Invalid Choise"<<"\n";
+   }
 }
