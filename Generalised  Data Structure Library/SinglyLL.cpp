@@ -223,14 +223,26 @@ void SinglyLL<T>::DeleteAtPos(int ipos)
 
 int main()
 {
+    int i;  
+    cout<<"SinglyLL of integer type:"<<"\n";
+    cout<<"SinglyLL of float type:"<<"\n";
+    cout<<"SinglyLL of double type:"<<"\n";
+    cout<<"SinglyLL of character type:"<<"\n";
+
+    cout<<"Enter your choise :"<<"\n";
+    cin>>i;
+
+    if(i == 1)
+    {
     SinglyLL <int>obj;
+
     int iRet = 0;
 
-    obj.InsertFirst(111);
-    obj.InsertFirst(101);
-    obj.InsertFirst(51);
-    obj.InsertFirst(21);
     obj.InsertFirst(11);
+    obj.InsertFirst(21);
+    obj.InsertFirst(51);
+    obj.InsertFirst(101);
+    obj.InsertFirst(111);
     
     obj.InsertLast(121);
     obj.InsertLast(151);
@@ -270,7 +282,163 @@ int main()
 
     iRet = obj.CountNode();
     cout<<"Number of elements in the linked list are : "<<iRet<<"\n";
+    }
+    else if(i == 2)
+    {
+         SinglyLL <float>obj;
 
+    int iRet = 0;
 
+    obj.InsertFirst(11.11);
+    obj.InsertFirst(21.2);
+    obj.InsertFirst(51.3);
+    obj.InsertFirst(101.4);
+    obj.InsertFirst(111.5);
+    
+    obj.InsertLast(121.6);
+    obj.InsertLast(151.2);
+    obj.InsertLast(201.3);
+    
+    obj.Display();
+
+    iRet = obj.CountNode();
+    cout<<"Number of elements in the linked list are : "<<iRet<<"\n";
+
+    obj.InsertAtPos(105.8, 5);
+
+    obj.Display();
+
+    iRet = obj.CountNode();
+    cout<<"Number of elements in the linked list are : "<<iRet<<"\n";
+
+    obj.DeleteAtPos(5);
+
+    obj.Display();
+
+    iRet = obj.CountNode();
+    cout<<"Number of elements in the linked list are : "<<iRet<<"\n";
+
+    obj.DeleteFirst();
+    
+
+    obj.Display();
+
+    iRet = obj.CountNode();
+    cout<<"Number of elements in the linked list are : "<<iRet<<"\n";
+
+    obj.DeleteLast();
+
+    
+    obj.Display();
+
+    iRet = obj.CountNode();
+    cout<<"Number of elements in the linked list are : "<<iRet<<"\n";
+    }
+    else if(i == 3)
+    {
+        SinglyLL <double>obj;
+
+    int iRet = 0;
+
+    obj.InsertFirst(11.1111);
+    obj.InsertFirst(21.3234);
+    obj.InsertFirst(51.789);
+    obj.InsertFirst(101.098);
+    obj.InsertFirst(111.567);
+    
+    obj.InsertLast(121.432);
+    obj.InsertLast(151.429);
+    obj.InsertLast(201.320);
+    
+    obj.Display();
+
+    iRet = obj.CountNode();
+    cout<<"Number of elements in the linked list are : "<<iRet<<"\n";
+
+    obj.InsertAtPos(105.526, 5);
+
+    obj.Display();
+
+    iRet = obj.CountNode();
+    cout<<"Number of elements in the linked list are : "<<iRet<<"\n";
+
+    obj.DeleteAtPos(5);
+
+    obj.Display();
+
+    iRet = obj.CountNode();
+    cout<<"Number of elements in the linked list are : "<<iRet<<"\n";
+
+    obj.DeleteFirst();
+    
+
+    obj.Display();
+
+    iRet = obj.CountNode();
+    cout<<"Number of elements in the linked list are : "<<iRet<<"\n";
+
+    obj.DeleteLast();
+
+    
+    obj.Display();
+
+    iRet = obj.CountNode();
+    cout<<"Number of elements in the linked list are : "<<iRet<<"\n";
+    }
+   else if (i == 4)
+{
+    SinglyLL <char>obj;
+
+    int iRet = 0;
+
+    obj.InsertFirst('E');
+    obj.InsertFirst('D');
+    obj.InsertFirst('C');
+    obj.InsertFirst('B');
+    obj.InsertFirst('A');
+    
+    obj.InsertLast('X');
+    obj.InsertLast('Y');
+    obj.InsertLast('Z');
+    
+    obj.Display();
+
+    iRet = obj.CountNode();
+    cout<<"Number of elements in the linked list are : "<<iRet<<"\n";
+
+    obj.InsertAtPos('S', 5);
+
+    obj.Display();
+
+    iRet = obj.CountNode();
+    cout<<"Number of elements in the linked list are : "<<iRet<<"\n";
+
+    obj.DeleteAtPos(5);
+
+    obj.Display();
+
+    iRet = obj.CountNode();
+    cout<<"Number of elements in the linked list are : "<<iRet<<"\n";
+
+    obj.DeleteFirst();
+    
+
+    obj.Display();
+
+    iRet = obj.CountNode();
+    cout<<"Number of elements in the linked list are : "<<iRet<<"\n";
+
+    obj.DeleteLast();
+
+    
+    obj.Display();
+
+    iRet = obj.CountNode();
+    cout<<"Number of elements in the linked list are : "<<iRet<<"\n";
+}
+    else
+   {
+       cout<<"invalid Choise<<"\n";
+   }
     return 0;
 }
