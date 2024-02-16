@@ -228,7 +228,7 @@ int main()
 
     if(i == 1)
     {
-    DoublyCL <int>obj;
+    DoublyLL <int>obj;
 
     int iRet = 0;
 
@@ -279,7 +279,7 @@ int main()
     }
     else if(i == 2)
     {
-         DoublyCL <float>obj;
+         DoublyLL <float>obj;
 
     int iRet = 0;
 
@@ -330,7 +330,7 @@ int main()
     }
     else if(i == 3)
     {
-        DoublyCL <double>obj;
+        DoublyLL <double>obj;
 
     int iRet = 0;
 
@@ -381,7 +381,7 @@ int main()
     }
    else if (i == 4)
 {
-    DoublyCL <char>obj;
+    DoublyLL <char>obj;
 
     int iRet = 0;
 
@@ -430,4 +430,8 @@ int main()
     iRet = obj.CountNode();
     cout<<"Number of elements in the linked list are : "<<iRet<<"\n";
 }
+    else
+   {
+       cout<<"Invalid Choise"<<"\n";
+   }
 }
