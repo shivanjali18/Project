@@ -25,6 +25,12 @@ class SinglyLL
         void DeleteLast();
         void InsertAtPos(T no,int ipos);
         void DeleteAtPos(int ipos);
+        int Addition();
+        int Frequency(T no);
+        int EvenCount();
+        int OddCount();
+        int Maximum();
+        int Minimum();
 };
 
 template <class T>
@@ -220,7 +226,112 @@ void SinglyLL<T>::DeleteAtPos(int ipos)
         Count--;
     }
 }
+template <class T>
+int SinglyLL<T>::Addition()
+{
+     struct node<T> * temp = first;
+    int iSum=0;
 
+    while(temp != NULL)
+    {
+        iSum = iSum + (temp)->data;
+        temp=temp->next;
+    }
+    return iSum;
+}
+
+template <class T>
+int SinglyLL<T>::Frequency(T no)
+{
+     struct node<T> * temp = first;
+    int iCnt=0;
+
+    while(temp != NULL)
+    {
+        if(temp->data == no)
+        {
+            iCnt++;
+        }
+        temp=temp->next;
+    }
+    return iCnt;
+}
+
+
+template <class T>
+int SinglyLL<T>::EvenCount()
+{
+     struct node<T> * temp = first;
+    int iCnt=0;
+
+    while(temp != NULL)
+    {
+        if(temp->data % 2 == 0)
+        {
+            iCnt++;
+            cout<<temp->data<<"\t";
+        }
+        
+        temp=temp->next;
+    }
+    return iCnt;
+}
+
+
+template <class T>
+int SinglyLL<T>::OddCount()
+{
+     struct node<T> * temp = first;
+    int iCnt=0;
+
+    while(temp != NULL)
+    {
+        if(temp->data % 2 != 0)
+        {
+            iCnt++;
+            cout<<temp->data<<"\t";
+        }
+        
+        temp=temp->next;
+    }
+    return iCnt;
+}
+
+template <class T>
+int SinglyLL<T>::Maximum()
+{
+     struct node<T> * temp = first;
+    int iMax=temp->data;
+
+    while(temp != NULL)
+    {
+        if(iMax < temp->data)
+        {
+            iMax =  temp->data;
+        }
+        
+        temp=temp->next;
+    }
+    return iMax;
+}
+
+template <class T>
+int SinglyLL<T>::Minimum()
+{
+     struct node<T> * temp = first;
+    int iMin=temp->data;
+
+    while(temp != NULL)
+    {
+        if(iMin > temp->data)
+        {
+            iMin = temp->data;
+        }
+        
+        temp=temp->next;
+    }
+    return iMin;
+}
 int main()
 {
     int i;  
@@ -440,5 +551,38 @@ int main()
    {
        cout<<"invalid Choise<<"\n";
    }
+ obj.Display();
+
+    iRet = obj.Addition();
+    cout<<"Addition of all nodes are : "<<iRet<<"\n";
+
+    obj.Display();
+
+    iRet = obj.EvenCount();
+    cout<<"Number of Even elements in the linked list are : "<<iRet<<"\n";
+
+    obj.Display();
+
+    iRet = obj.OddCount();
+    cout<<"Number of Odd elements in the linked list are : "<<iRet<<"\n";
+
+    obj.Display();
+
+    iRet = obj.Maximum();
+    cout<<" Maximum element in the linked list are : "<<iRet<<"\n";
+
+    obj.Display();
+
+    iRet = obj.Minimum();
+    cout<<" Minimum elements in the linked list are : "<<iRet<<"\n";
+
+    int ivalue=0;
+    cout<<"Enter the number that you want to find frequency:";
+    cin>>ivalue;
+    obj.Display();
+
+    iRet = obj.Frequency(ivalue);
+    cout<<"Frequency of that node are : "<<iRet<<"\n"; 
+
     return 0;
 }
