@@ -450,6 +450,6 @@ int main()
 }
     else
    {
-       cout<<"invalid Choise<<"\n";
+       cout<<"invalid Choise";
    }
 }
