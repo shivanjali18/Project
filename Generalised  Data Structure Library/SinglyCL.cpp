@@ -28,12 +28,7 @@ class SinglyCL
         void DeleteLast();
         void InsertAtPos(T no,int ipos);
         void DeleteAtPos(int ipos);
-         int Addition();
-         int Frequency(T no);
-        int EvenCount();
-        int OddCount();
-        int Maximum();
-        int Minimum();
+     
 };
 template <class T>
 SinglyCL<T>::SinglyCL()
@@ -230,127 +225,7 @@ void SinglyCL<T>::DeleteAtPos(int ipos)
     }
     Count--;
 }
-template <class T>
-int SinglyCL<T>::Addition()
-{
-    int iSum=0;
-    struct node<T> * temp = first;
 
-    if((first != NULL)&&(last != NULL))
-    {
-        do
-        {
-            iSum=iSum+temp->data;
-            temp=temp->next;
-        }while(temp != first);
-    }
-    return iSum;
-}
-
-template <class T>
-int SinglyCL<T>::EvenCount()
-{
-     int iCnt=0;
-    struct node<T> * temp = first;
-
-    if((first != NULL)&&(last != NULL))
-    {
-        do
-        {
-            if(temp->data % 2 == 0)
-            {
-                iCnt++;
-            }
-          
-            temp=temp->next;
-        }while(temp != first);
-    }
-    return iCnt;
-}
-
-
-template <class T>
-int SinglyCL<T>::OddCount()
-{
-     int iCnt=0;
-    struct node<T> * temp = first;
-
-    if((first != NULL)&&(last != NULL))
-    {
-        do
-        {
-            if(temp->data % 2 != 0)
-            {
-                iCnt++;
-            }
-          
-            temp=temp->next;
-        }while(temp != first);
-    }
-    return iCnt;
-}
-
-template <class T>
-int SinglyCL<T>::Maximum()
-{
-    struct node<T> * temp = first;
-    int iMax=temp->data;
-
-    if((first != NULL)&&(last != NULL))
-    {
-        do
-        {
-            if(iMax < temp->data)
-            {
-                iMax=temp->data;
-            }
-          
-            temp=temp->next;
-        }while(temp != first);
-    }
-    return iMax;
-}
-
-template <class T>
-int SinglyCL<T>::Minimum()
-{
-     struct node<T> * temp = first;
-    int iMin=temp->data;
-    
-    if((first != NULL)&&(last != NULL))
-    {
-        do
-        {
-            if(iMin > temp->data)
-            {
-                iMin=temp->data;
-            }
-          
-            temp=temp->next;
-        }while(temp != first);
-    }
-    return iMin;
-}
-template <class T>
-int SinglyCL<T>::Frequency(T no)
-{
-     struct node<T> * temp = first;
-    int iCnt=0;
-    
-    if((first != NULL)&&(last != NULL))
-    {
-        do
-        {
-            if(temp->data == no)
-            {
-                iCnt++;
-            }
-          
-            temp=temp->next;
-        }while(temp != first);
-    }
-    return iCnt;
-}
 int main()
 {
    int i;  
@@ -570,25 +445,5 @@ int main()
    {
        cout<<"Invalid Choise"<<"\n";
    }
-      iRet = obj.Addition();
-    cout<<"\nAddition of all nodes are : "<<iRet<<"\n";
-
-    iRet = obj.EvenCount();
-    cout<<"Number of Even elements in the linked list are : "<<iRet<<"\n";
-
-    iRet = obj.OddCount();
-    cout<<"Number of Odd elements in the linked list are : "<<iRet<<"\n";
-
-    iRet = obj.Maximum();
-    cout<<" Maximum element in the linked list are : "<<iRet<<"\n";
-
-    iRet = obj.Minimum();
-    cout<<"Minimum elements in the linked list are : "<<iRet<<"\n";
-
-     int ivalue=0;
-    cout<<"Enter the number that you want to find frequency:";
-    cin>>ivalue;
-  
-    iRet = obj.Frequency(ivalue);
-    cout<<"Frequency of that node are : "<<iRet<<"\n"; 
+     
 }
