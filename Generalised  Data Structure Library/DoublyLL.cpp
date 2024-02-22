@@ -432,6 +432,6 @@ int main()
 }
     else
    {
-       cout<<"Invalid Choise"<<"\n";
+       cout<<"Invalid Choise";
    }
 }
