@@ -38,7 +38,7 @@ SinglyCL<T>::SinglyCL()
     Count = 0;
 }
 template <class T>
-void SinglyCL::InsertFirst(T no)
+void SinglyCL<T>::InsertFirst(T no)
 {
  struct node<T> * newn = NULL;
 
